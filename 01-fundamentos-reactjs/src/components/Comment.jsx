@@ -1,0 +1,38 @@
+import { ThumbsUp, Trash } from "phosphor-react";
+
+import { Avatar } from "./Avatar";
+import styles from "./Comment.module.css";
+
+export function Comment() {
+  return (
+    <div className={styles.comment}>
+      <Avatar hasBorder={false} src="https://github.com/HygorM10.png" />
+
+      <div className={styles.commentBox}>
+        <div className={styles.commentContent}>
+          <header>
+            <div className={styles.authorAndTime}>
+              <strong>Hygor Martins</strong>
+              <time title="05 de Março de 2023" dateTime="2023-03-05 00:03:00">
+                Cerca de 1h atrás
+              </time>
+            </div>
+
+            <button title="Deletar comentário">
+              <Trash size={24} />
+            </button>
+          </header>
+
+          <p>Muito bom Dev, parabens</p>
+        </div>
+
+        <footer>
+          <button>
+            <ThumbsUp />
+            Aplaudir <span> 20</span>
+          </button>
+        </footer>
+      </div>
+    </div>
+  );
+}
